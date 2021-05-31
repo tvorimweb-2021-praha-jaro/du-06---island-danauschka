@@ -1,0 +1,447 @@
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+/*
+ BARVY
+ pozadi           #f5f5f5
+ dekorace nadpisů #629edb
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.obal {
+    margin: auto;
+}
+
+header {
+    background-image:linear-gradient(hsla(0 0% 0% / 0.2), hsla(0 0% 0% / 0.2)),
+    url('images/island-hlavicka.jpg');
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    margin-top: 1rem;
+}
+
+.autor {
+    color: lightgray;
+    margin-top: 2rem;
+}
+
+.titulek {
+    font-family: 'Raleway', serif;
+}
+
+.menu {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    list-style: none;
+    text-align: center;
+    font-size: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: gray;
+}
+
+.menu li {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.uvod img {
+    margin-top: 2rem;
+}
+
+.popisek, .popisek a  {
+    text-align: center;
+    font-size: 0.5rem;
+    color: gray;
+    font-family: sans-serif;
+}
+
+.popisek-gallery {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.popisek2 {
+    margin-top: 0;
+}
+
+h2 {
+    font-family: sans-serif;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.linka-autor {
+    position: relative;
+}
+
+.linka-autor::before {
+    content: '';
+    position: absolute;
+    background-color:gray;
+    width: 10%;
+    height: 3px;
+    top: -1rem;
+}
+
+.linka {
+    position: relative;
+}
+
+.linka::after {
+    content: '';
+    position: absolute;
+    background-color:#629edb;
+    width: 10%;
+    height: 3px;
+    bottom: 0;
+}
+
+p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.5rem;
+}
+
+.foto {
+    margin: 0;
+}
+
+footer {
+    background-color: #E8E8E8;
+    color: #989898;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+footer a {
+    color: #989898;
+}
+
+@media screen and (min-width: 500px) {
+    .titulek {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.7rem;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 0.5rem;
+        font-size: 0.5rem;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .menu li {
+        border-bottom: none;
+    }
+
+    .image-tablet {
+        position: relative;
+    }
+
+    .popisek2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: white;
+    }
+
+    .popisek2 a {
+        color: white;
+    }
+
+    .galerie {
+        display: grid;
+        gap: 0;
+    }
+
+    .galerie .popisek {
+        opacity: 0;
+    }
+
+    .foto {
+        position: relative;
+        overflow: hidden;
+    }
+ 
+    .foto .popisek {
+        position: absolute;
+        bottom: 0;
+        background-color: gray;
+        color: white;
+        width: 100%;
+        padding: 1rem;
+    }
+ 
+     .foto .popisek a {
+        color: white;
+    }
+ 
+     .foto:hover .image {
+        transform: scale(1.5, 1.5);
+    }
+ 
+    .foto:hover .popisek {
+        opacity: 0.6;
+    }
+
+    .jedna {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .dva {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .tri {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .ctyri {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .pet {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .sest {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .sedm {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .osm {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .devet {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    p {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    header {
+        height: 70vh;
+    }
+
+    header p {
+        padding-left: 13rem;
+        padding-right: 13rem;
+        font-size: 0.9rem;
+    }
+
+    .titulek {
+        font-size: 5rem;
+        margin-top: 0.1rem;
+        margin-bottom: 0;
+    }
+  
+    .obal {
+        max-width: 960px;
+        margin: auto;
+        background-color: white;
+        box-shadow: 1px 1px 10px 5px #D8D8D8;
+        position: absolute;
+        top: 23rem;
+    }
+
+    .menu {
+        display: block;
+        float: left;
+    }
+    
+    .uvod-desktop {
+        margin-left: 10rem;
+    }
+
+    .proc h2, .proc p {
+        margin-left: 2rem;
+        margin-right: 15rem;
+    }
+
+    .kvideni h2, .kvideni p {
+        margin-left: 15rem;
+        margin-right: 2rem;
+    }
+
+    .kvideni .linka::after {
+     left: 15rem;
+    }
+
+    .galerie {
+        display: grid;
+        gap: 0;
+    }
+
+    .foto {
+       position: relative;
+       overflow: hidden;
+    }
+
+   .foto .popisek {
+       position: absolute;
+       bottom: 0;
+       background-color: gray;
+       color: white;
+       width: 100%;
+       padding: 1rem;
+    }
+
+    .foto .popisek a {
+       color: white;
+    }
+
+    .foto:hover .image {
+       transform: scale(1.5, 1.5);
+    }
+
+   .foto:hover .popisek {
+       opacity: 0.6;
+   }
+
+    .jedna {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .dva {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .tri {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .ctyri {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .pet {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .sest {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .sedm {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .osm {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .devet {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    footer {
+        margin-left: 5rem;
+        background-color: #f5f5f5;
+    }
+
+    footer p {
+        padding-left: 0;
+    }
+}
+
+
