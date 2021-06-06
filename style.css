@@ -50,7 +50,7 @@ img {
     font-family: sans-serif;
     list-style: none;
     text-align: center;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     margin-top: 2rem;
     margin-bottom: 3.5rem;
 }
@@ -96,6 +96,8 @@ h2 {
 }
 
 .linka-autor::before {
+    left: 50%;
+    transform: translateX(-50%);
     content: '';
     position: absolute;
     background-color:gray;
@@ -120,7 +122,7 @@ h2 {
 p {
     padding-left: 1rem;
     padding-right: 1rem;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
 }
 
 .foto {
@@ -144,7 +146,7 @@ footer a {
     }
 
     p {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     h2 {
@@ -160,7 +162,7 @@ footer a {
         justify-content: space-evenly;
         align-items: center;
         padding-top: 0.5rem;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         border-top: 1px solid lightgray;
         border-bottom: 1px solid lightgray;
     }
@@ -187,6 +189,7 @@ footer a {
     .galerie {
         display: grid;
         gap: 0;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .galerie .popisek {
@@ -217,69 +220,6 @@ footer a {
  
     .foto:hover .popisek {
         opacity: 0.6;
-    }
-
-    .jedna {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-
-    .dva {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-
-    .tri {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    .ctyri {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    .pet {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-
-    .sest {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-
-    .sedm {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-
-    .osm {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-
-    .devet {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 5;
-        grid-row-end: 6;
     }
 }
 
@@ -313,17 +253,19 @@ footer a {
         margin: auto;
         background-color: white;
         box-shadow: 1px 1px 10px 5px #D8D8D8;
-        position: absolute;
-        top: 23rem;
+        margin-top: -5rem;
     }
 
     .menu {
         display: block;
         float: left;
+        font-size: 0.8rem;
+        text-align: left;
     }
     
     .uvod-desktop {
-        margin-left: 10rem;
+        margin-left: 13rem;
+        padding-top: 1rem;
     }
 
     .proc h2, .proc p {
@@ -337,12 +279,11 @@ footer a {
     }
 
     .kvideni .linka::after {
-     left: 15rem;
+         left: 15rem;
     }
 
     .galerie {
-        display: grid;
-        gap: 0;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .foto {
@@ -370,69 +311,6 @@ footer a {
    .foto:hover .popisek {
        opacity: 0.6;
    }
-
-    .jedna {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-
-    .dva {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-
-    .tri {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-
-    .ctyri {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    .pet {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    .sest {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    .sedm {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-
-    .osm {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-
-    .devet {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
 
     footer {
         margin-left: 5rem;
